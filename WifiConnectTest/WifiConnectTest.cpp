@@ -1,4 +1,4 @@
-#include "WifiConnectTest.h"
+ï»¿#include "WifiConnectTest.h"
 #include <qfile.h>
 #include <qdebug.h>
 #include <qmessagebox.h>
@@ -68,7 +68,7 @@ WifiConnectTest::~WifiConnectTest() {
 
 void WifiConnectTest::addTableHeader(QStandardItemModel * model) {
     QStringList titles;
-    titles << "ssid" << u8"ÊÇ·ñ¿ÉÁ¬½Ó" << u8"ÐÅºÅÖÊÁ¿" << "rssi" << u8"Æô¶¯ÍøÂç°²È«" << u8"ÈÏÖ¤Ëã·¨" << u8"¼ÓÃÜËã·¨" << u8"×´Ì¬" << u8"ÃÜÂë";
+    titles << "ssid" << u8"æ˜¯å¦å¯è¿žæŽ¥" << u8"ä¿¡å·è´¨é‡" << "rssi" << u8"å¯åŠ¨ç½‘ç»œå®‰å…¨" << u8"è®¤è¯ç®—æ³•" << u8"åŠ å¯†ç®—æ³•" << u8"çŠ¶æ€" << u8"å¯†ç ";
     model->setColumnCount(titles.size());
     for (int i = 0; i < titles.size(); i++) {
         model->setHeaderData(i, Qt::Horizontal, titles[i], Qt::DisplayRole);

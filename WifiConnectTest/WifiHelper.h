@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <Windows.h>
 #include <wlanapi.h>
@@ -14,13 +14,13 @@ struct EntryInfo {
     QString profile;
     QString ssid;
     bool connectable;
-    long signalQuality;//ĞÅºÅÖÊÁ¿
+    long signalQuality;//ä¿¡å·è´¨é‡
     int rssi;
-    bool securityEnabled;//Æô¶¯ÍøÂç°²È«
-    QString authAlgorithm;//ÈÏÖ¤Ëã·¨
-    QString cipherAlgorithm;//¼ÓÃÜËã·¨
+    bool securityEnabled;//å¯åŠ¨ç½‘ç»œå®‰å…¨
+    QString authAlgorithm;//è®¤è¯ç®—æ³•
+    QString cipherAlgorithm;//åŠ å¯†ç®—æ³•
     DWORD dwFlags;
-    QString status;//µ±Ç°×´Ì¬
+    QString status;//å½“å‰çŠ¶æ€
     //
     DOT11_SSID dot11_ssid;
     DOT11_BSS_TYPE dot11BssType;

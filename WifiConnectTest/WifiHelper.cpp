@@ -1,4 +1,4 @@
-#include "WifiHelper.h"
+ï»¿#include "WifiHelper.h"
 #include <qdebug.h>
 
 void WlanNotificationCallback(PWLAN_NOTIFICATION_DATA Arg1, PVOID Arg2) {
@@ -188,7 +188,7 @@ void WifiHelper::connectWifi(const GUID& interfaceGuid, const EntryInfo& entryIn
     DWORD dwResult = WlanConnect(hClient, &interfaceGuid, &parameter, NULL);
     if (dwResult != ERROR_SUCCESS) {
         if (dwResult == ERROR_INVALID_PARAMETER) {
-            printErr(u8"ÎŞ·¨Á¬½Ó", u8"²»Ö§³ÖµÄÁ¬½Ó£¡ĞŞ¸ÄprofileÄ£°å£¡");
+            printErr(u8"æ— æ³•è¿æ¥", u8"ä¸æ”¯æŒçš„è¿æ¥ï¼ä¿®æ”¹profileæ¨¡æ¿ï¼");
         } else {
             Q_ASSERT(dwResult == ERROR_SUCCESS);
         }
@@ -364,11 +364,11 @@ void WifiHelper::findActiveWireless(WifiInfo& wifiInfo) {
             }
             entryInfo.dwFlags = pBssEntry->dwFlags;
             if (pBssEntry->dwFlags & WLAN_AVAILABLE_NETWORK_CONNECTED) {
-                entryInfo.status = u8"ÒÑÁ¬½Ó";
+                entryInfo.status = u8"å·²è¿æ¥";
             } else if (pBssEntry->dwFlags & WLAN_AVAILABLE_NETWORK_HAS_PROFILE) {
-                entryInfo.status = u8"ÒÑ±£´æ";
+                entryInfo.status = u8"å·²ä¿å­˜";
             } else {
-                entryInfo.status = u8"Î´Á¬½Ó";
+                entryInfo.status = u8"æœªè¿æ¥";
                 if (entryList.contains(entryInfo.ssid)) {
                     continue;
                 }
